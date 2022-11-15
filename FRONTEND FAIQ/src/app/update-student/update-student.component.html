@@ -1,0 +1,48 @@
+<div id="outPopUp" class="">
+    <div class="">
+    
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <div align="center">
+            <img  src="/assets/Picture8.png" style="width:30%; height: 100px;">
+      
+        <form  [formGroup]="studentForm" >
+          <div class="col-lg-4 mx-auto" >
+            <input type="text" class="form-control" formControlName="studentName" placeholder="Student Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control" formControlName="courseName" placeholder="Student Course Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="phoneNumber" placeholder="Student Phone Number">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="semester" placeholder="Student Semester">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="age" placeholder="Student Age">
+          </div>
+          <br>
+        
+          <div  align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="studentUpdate()">
+            <button >Confirm Update🧑‍🎓</button>
+        </div>
+    
+        </form>
+      
+      </div>
+    </div>
